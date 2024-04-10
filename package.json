@@ -1,0 +1,11 @@
+{
+  "name": "we-deliver-tracking",
+  "version": "1.0.0",
+  "description": "a delivery company with location tracking",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "author": "ejike-nweze, olisa m.",
+  "license": "ISC"
+}
