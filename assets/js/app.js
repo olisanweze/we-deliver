@@ -1,21 +1,19 @@
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*=======================================================*/
 /*                                                       */
 /*  Olisa Nweze (2024)                                   */
 /*  github.com/olisanweze                                */
 /*                                                       */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*=======================================================*/
 
 'use strict';
-
 import { select, listen } from './utils.js';
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*=======================================================*/
 /*  Organizer                                            */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*=======================================================*/
 
 const track = select('.track-button');
 const placeholder = select('.map-placeholder');
-const map = select('#map');
 
 //  The 'success' callback function
 function getLocation(position) {
@@ -26,7 +24,7 @@ function getLocation(position) {
 
 //  The 'error/failure' callback function
 function errorHandler() {
-  mapBuild(0, 0);
+  placeholder.innerText = 'Unable to retrieve user location';
 }
 
 const options = {
@@ -39,30 +37,22 @@ function mapBuild(longitude, latitude) {
   const map = new mapboxgl.Map({
   container: 'map', // container ID
   center: [longitude, latitude], // starting position [lng, lat]
-  zoom: 10, // starting zoom
+  zoom: 15, // starting zoom
   });
 
-  map.addControl(
-    new MapboxDirections({
-    accessToken: mapboxgl.accessToken
-    }),
-    'top-left'
-  );
-  const marker1 = new mapboxgl.Marker({color: '#ff7342'})
+  const marker1 = new mapboxgl.Marker({color: '#1e90ff'})
   .setLngLat([longitude, latitude])
   .addTo(map);
 }
 
 function genMap() {
   if ('geolocation' in navigator) {
-    placeholder.innerText ='';
     navigator.geolocation.getCurrentPosition(
       getLocation, errorHandler, options
     );
+  } else {
+    placeholder.innerText = 'Geolocation is not supported by your browser';
   }
-
-  placeholder.classList.add('none');
-  map.classList.add('block');
 }
 
 listen('click', track, genMap);
