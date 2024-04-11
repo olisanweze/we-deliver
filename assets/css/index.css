@@ -185,7 +185,7 @@ section {
 }
 
 .tracking-map {
-  padding-bottom: 40px;
+  padding: 60px 0;
 }
 
 .mapboxgl-ctrl-attrib {
@@ -193,7 +193,7 @@ section {
 }
 
 #map {
-  background-color: rgb(131 131 131 / 0.05);
+  background-color: rgb(131 131 131 / 0.2);
   width: 100%;
   height: 600px;
   border-radius: 20px;

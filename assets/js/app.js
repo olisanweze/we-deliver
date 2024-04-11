@@ -47,6 +47,7 @@ function mapBuild(longitude, latitude) {
 
 function genMap() {
   if ('geolocation' in navigator) {
+    placeholder.innerText = 'Please wait while we load your location';
     navigator.geolocation.getCurrentPosition(
       getLocation, errorHandler, options
     );
