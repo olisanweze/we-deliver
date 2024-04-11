@@ -194,8 +194,8 @@ section {
   padding: 60px 0;
 }
 
-.mapboxgl-ctrl-attrib {
-  display: none;
+.mapboxgl-ctrl-logo, .mapboxgl-ctrl-attrib {
+  display: none !important;
 }
 
 #map {
