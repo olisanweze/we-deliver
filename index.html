@@ -14,13 +14,98 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap">
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css'/> 
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css" type="text/css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js'></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js"></script>
     <script src="./assets/js/app.js" type="module"></script>
   </head>
   <body>
+    <div class="landing-page">
+      <header>
+        <div class="flex space-between container center">
+          <h1><a href="./index.html">we<span class="blue">.deliver</span></a></h1>
+          <nav>
+            <ul class="flex">
+              <li><a href="#">Tracking</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Locations</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <button><span>Get a Ticket</span></button>
+        </div>
+      </header>
+      <section class="hero-content flex center">
+        <div class="container hero-writeup-content">
+          <h2>Track Your Package</h2>
+          <p>
+            Curious about your package?
+          </p>
+          <p>
+            Follow its journey from our warehouse to your doorstep.
+          </p>
+          <button class="track-button"><span>Track</span></button>
+        </div>
+      </section>
+      <div class="empty"></div>
+    </div>
     <main>
-      <div class="container">
-
-      </div>
+      <section class="tracking-map container">
+        <div class="map-placeholder"></div>
+        <div id="map"></div>
+      </section>
+      <section class="careers">
+        <div class="container flex row space-between">
+          <div class="column-small flex">
+            <div class="careers-ad">
+              <h3>Come join us</h3>
+              <p>
+                At <span class="bold">we<span class="blue">.deliver</span></span> 
+                we're passionate about delivering exceptional service to our 
+                customers. 
+              </p>
+              <p>
+                As a leading delivery provider, we 
+                pride ourselves on timely and reliable deliveries. 
+                Join our team and be part of something great!
+              </p>
+              <button><span>Apply Now</span></button>
+            </div>
+          </div>
+          <div class="column-big"></div>
+        </div>
+      </section>
     </main>
+    <footer>
+      <div class="container">
+        <div class="flex space-between">
+          <ul class="list flex contact">
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-x-twitter"></i>  
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">&copy; 2024 we<span class="blue">.deliver</span></p>
+        </div> 
+      </div>
+  </footer>
   </body>
 </html>
