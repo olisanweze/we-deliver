@@ -55,13 +55,13 @@ function mapBuild(longitude, latitude) {
 
 function genMap() {
   if ('geolocation' in navigator) {
-   // placeholder.innerText ='';
+    placeholder.innerText ='';
     navigator.geolocation.getCurrentPosition(
       getLocation, errorHandler, options
     );
   }
 
-  // placeholder.classList.add('.none');
+  placeholder.classList.add('none');
   map.classList.add('block');
 }
 
